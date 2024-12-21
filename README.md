@@ -8,25 +8,23 @@ This project involved using SQL to perform exploratory data analysis on an NBA d
 ## Creating The Tables To Store The Datasets
 ```sql
 DROP TABLE IF EXISTS nba_playerstats;
-CREATE TABLE nba_playerstats
-			(
-				Season INT,
-				Player VARCHAR(100),
-				Pos VARCHAR(10),
-				Age INT,
-				Tm VARCHAR(10),
-				G INT,
-				TRB INT,
-				AST INT,
-				PTS INT
-			);
+CREATE TABLE nba_playerstats(
+	Season INT,
+	Player VARCHAR(100),
+	Pos VARCHAR(10),
+	Age INT,
+	Tm VARCHAR(10),
+	G INT,
+	TRB INT,
+	AST INT,
+	PTS INT
+);
 ```
 ```sql
 DROP TABLE IF EXISTS nba_playersalaries;
-CREATE TABLE nba_playersalaries
-			(
-				Player VARCHAR(50),
-				Season INT,
-				Salary VARCHAR(15)
-			);
+CREATE TABLE nba_playersalaries(
+	Player VARCHAR(50),
+	Season INT,
+	Salary VARCHAR(15)
+);
 ```
