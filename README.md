@@ -1,7 +1,5 @@
 # NBA Salaries SQL/Tableau Data Analysis and Visualization Project
 
-<img src="https://github.com/user-attachments/assets/2fb24910-6263-40e0-ba56-27b313586c03" alt="nba-logo-on-transparent-background-free-vector" width="500" height="350">
-
 <div align="center">
   <img width = "500" src="https://github.com/user-attachments/assets/2fb24910-6263-40e0-ba56-27b313586c03" alt="nba-logo-on-transparent-background-free-vector">
 </div>
