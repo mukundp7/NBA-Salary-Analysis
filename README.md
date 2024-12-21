@@ -85,10 +85,10 @@ CREATE VIEW nba_playersalaries_totalstats AS
 SELECT 
     player, 
     season, 
-    MAX(salary) AS salary,  -- Keeps the maximum salary (or adjust as needed)
-    MAX(pos) AS pos,        -- Keeps one position (adjust logic as needed)
-    MAX(age) AS age,        -- Keeps the maximum age
-    MAX(tm) AS tm,          -- Keeps one team (adjust if needed)
+    MAX(salary) AS salary,  
+    MAX(pos) AS pos,        
+    MAX(age) AS age,        
+    MAX(tm) AS tm,          
     SUM(g) AS total_games, 
     SUM(trb) AS total_rebounds, 
     SUM(ast) AS total_assists, 
