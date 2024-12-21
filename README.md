@@ -1,6 +1,6 @@
 # NBA Salaries SQL/Tableau Data Analysis and Visualization Project
 
-![nba-logo](https://github.com/user-attachments/assets/37a4d654-68b2-4b2a-bd7f-e72128469f5f)
+<img src="https://github.com/user-attachments/assets/2fb24910-6263-40e0-ba56-27b313586c03" alt="nba-logo-on-transparent-background-free-vector" width="300" height="200">
 
 ## Overview
 This project involved using SQL to perform exploratory data analysis on an NBA dataset which contained player names, age, salary, and stats for each NBA season between 2000-2020. The insights were then visualized using tableau to create a dashboard that effectively conveyed the results. The goal of this project was to show how NBA salaries have changed over time. These insights could be used in further analysis projects to dig deeper into what led to each of the results. 
