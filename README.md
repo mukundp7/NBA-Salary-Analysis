@@ -3,8 +3,7 @@
 ## Overview
 This project involved using SQL to perform exploratory data analysis on an NBA dataset which contained player names, age, salary, and stats for each NBA season between 2000-2020. The insights were then visualized using tableau to create a dashboard that effectively conveyed the results. The goal of this project was to show how NBA salaries have changed over time. These insights could be used in further analysis projects to dig deeper into what led to each of the results. 
 
-```sql
-```
+
 ## Creating The Tables To Store The Datasets
 ```sql
 DROP TABLE IF EXISTS nba_playerstats;
