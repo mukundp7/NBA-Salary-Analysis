@@ -29,4 +29,81 @@ CREATE TABLE nba_playersalaries(
 );
 ```
 ## Data Analysis
-1.) Checking for Duplicates
+1.) Creating a View for data between the year 2000-2020.
+```sql
+CREATE VIEW nba_playersalaries_1 AS
+SELECT DISTINCT ON (player, season)*
+FROM nba_playersalaries
+WHERE season BETWEEN 2000 AND 2020;
+```
+
+2.) Performing a join to get stats with salary 
+```sql
+CREATE VIEW nba_playersalaries_stats AS
+SELECT 
+	nba_playersalaries_1.player,
+	nba_playersalaries_1.season,
+	nba_playersalaries_1.salary,
+	nba_playerstats.pos,
+	nba_playerstats.age,
+	nba_playerstats.tm,
+	nba_playerstats.g,
+	nba_playerstats.trb,
+	nba_playerstats.ast,
+	nba_playerstats.pts
+FROM nba_playersalaries_1
+JOIN nba_playerstats
+ON nba_playersalaries_1.player = nba_playerstats.player AND nba_playersalaries_1.season = nba_playerstats.season;
+```
+3.) Checking for duplicates
+```sql
+SELECT 
+	*,
+    COUNT(*) AS duplicate_count
+FROM 
+    nba_playersalaries_stats
+GROUP BY 
+    player, 
+    season,
+	salary,
+	pos,
+	age,
+	tm,
+	g,
+	trb,
+	ast,
+	pts
+HAVING 
+    COUNT(*) > 1;
+```
+
+4.) Creating a View for total stats for each player in a season
+```sql
+CREATE VIEW nba_playersalaries_totalstats AS
+SELECT 
+    player, 
+    season, 
+    MAX(salary) AS salary,  -- Keeps the maximum salary (or adjust as needed)
+    MAX(pos) AS pos,        -- Keeps one position (adjust logic as needed)
+    MAX(age) AS age,        -- Keeps the maximum age
+    MAX(tm) AS tm,          -- Keeps one team (adjust if needed)
+    SUM(g) AS total_games, 
+    SUM(trb) AS total_rebounds, 
+    SUM(ast) AS total_assists, 
+    SUM(pts) AS total_points
+FROM 
+    nba_playersalaries_stats
+GROUP BY 
+    player, season;
+```
+5.) Finding the youngest and oldest player in our dataset.
+```sql
+SELECT 
+    MIN(age) AS min_value, 
+    MAX(age) AS max_value
+FROM 
+    nba_playersalaries_totalstats;
+```
+
+
+
