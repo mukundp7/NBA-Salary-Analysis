@@ -28,3 +28,5 @@ CREATE TABLE nba_playersalaries(
 	Salary VARCHAR(15)
 );
 ```
+## Data Analysis
+1.) Checking for Duplicates
