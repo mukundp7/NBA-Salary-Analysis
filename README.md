@@ -39,7 +39,7 @@ FROM nba_playersalaries
 WHERE season BETWEEN 2000 AND 2020;
 ```
 
-2.) Performing a join to get stats with salary 
+2.) Performing a join to create a single view
 ```sql
 CREATE VIEW nba_playersalaries_stats AS
 SELECT 
