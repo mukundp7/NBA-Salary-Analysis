@@ -105,5 +105,12 @@ FROM
     nba_playersalaries_totalstats;
 ```
 
-
+## Technology Stack
+- **Database**: PostgreSQL
+- **SQL Queries**: DDL, DML, Aggregations, Joins 
+- **Tools**: pgAdmin 4 (SQL editor), PostgreSQL, Tableau
+## Next Steps
+- **Visualize the Data**: Using Tableau I will create a visualization using the SQL query results.
+- **Expand Dataset**: We can include additional years in our dataset for further testing and increasing our timeline. 
+- **Advanced Querying**: Dive deeper into query optimization and explore the performance of SQL queries on larger datasets.
 
